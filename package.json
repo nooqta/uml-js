@@ -2,12 +2,13 @@
 	"author": "Masanao Izumo <iz@onicos.co.jp>",
 	"contributors": [
 		"T. Jameson Little <t.jameson.little@gmail.com>",
-		"Dan Kogai <dankogai+github@gmail.com>"
+		"Dan Kogai <dankogai+github@gmail.com>",
+		"Anis Marrouchi <anismarrouchi@hotmail.com>"
 	],
 	"name": "deinflate-js",
 	"description": "DEFLATE implemented in JavaScript (works in browser and Node)",
 	"license": "GPL",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"main": "./index.js",
 	"bin": {
 		"deflate-js": "./bin/deflate.js",
