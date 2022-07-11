@@ -14,7 +14,7 @@
 		"Dan Kogai <dankogai+github@gmail.com>",
 		"Anis Marrouchi <anismarrouchi@hotmail.com>"
 	],
-	"name": "uml-js",
+	"name": "plantuml-client-js",
 	"description": "Generate UML Diagrams using plantuml",
 	"license": "GPL",
 	"version": "0.2.4",
