@@ -1,25 +1,35 @@
 {
-	"author": "Masanao Izumo <iz@onicos.co.jp>",
+	"authors": [
+		{
+			"name": "Masanao Izumo",
+			"email": "iz@onicos.co.jp"
+		},
+		{
+			"name": "Anis Marrouchi",
+			"email": "anismarrouchi@hotmail.com"
+		}
+	],
 	"contributors": [
 		"T. Jameson Little <t.jameson.little@gmail.com>",
 		"Dan Kogai <dankogai+github@gmail.com>",
 		"Anis Marrouchi <anismarrouchi@hotmail.com>"
 	],
-	"name": "deinflate-js",
-	"description": "DEFLATE implemented in JavaScript (works in browser and Node)",
+	"name": "uml-js",
+	"description": "Generate UML Diagrams using plantuml",
 	"license": "GPL",
 	"version": "0.2.4",
 	"main": "./index.js",
 	"bin": {
 		"deflate-js": "./bin/deflate.js",
-		"inflate-js": "./bin/inflate.js"
+		"inflate-js": "./bin/inflate.js",
+		"plantuml-js": "./bin/plantuml.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/nooqta/deflate-js.git"
+		"url": "git://github.com/nooqta/plantuml-js.git"
 	},
 	"scripts": {
-		"test": "cd test ; ./runner.py; cd -"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"engines": {
 		"node": ">= 0.4.0"

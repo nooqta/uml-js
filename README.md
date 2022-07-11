@@ -1,6 +1,45 @@
 Intro
 =====
+Plantuml-js builds on top of deflate-js and adds the requirement in order consume plantuml API from Javascript.
+You can read more about [here](https://plantuml.com/fr/code-javascript-synchronous).
 
+Usage
+======
+```javascript
+import fs from "fs";
+import Axios from "axios";
+const { plantuml } = require("plantuml-js");
+...
+const uml = `
+			@startuml
+			Class01 <|-- Class02
+			Class03 *-- Class04
+			Class05 o-- Class06
+			Class07 .. Class08
+			Class09 -- Class10
+			@enduml`;
+			
+const url = plantuml.generateUrl(_data.extension, uml);
+await this.downloadResource(url, 'path/filname');
+
+...
+async downloadResource(url: any, filepath: string) {
+    const response = await Axios({
+      url,
+      method: "GET",
+      responseType: "stream",
+    });
+    return new Promise((resolve, reject) => {
+      response.data
+        .pipe(fs.createWriteStream(filepath))
+        .on("error", reject)
+        .once("close", () => resolve(filepath));
+    });
+  }		
+```
+
+Deflate-js Intro
+=====
 Does deflate compression/decompression in the browser and node.
 
 This module is not meant to be run on node for any production code. The native version of deflate should be used instead because it is much faster.  The main reason for this being node-compatible is for testing purposes.
